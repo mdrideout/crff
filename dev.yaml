@@ -1,0 +1,12 @@
+# docker-compose.yml
+version: '3'
+services:
+    dev-app:
+        build: .
+        working_dir: /usr/src/app
+        volumes:
+            - .:/usr/src/app
+        ports:
+            # Service will be accessible on the host at port 9090.
+            - "8080:${PORT:-8080}"
+        command: bash -c "npm install -g nodemon && nodemon --exec npm run start"

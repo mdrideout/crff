@@ -1,0 +1,25 @@
+{
+  "name": "crff",
+  "version": "1.0.0",
+  "description": "Cloud Run Functions Framework Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up:dev": "docker-compose -f dev.yaml up",
+    "down:dev": "docker-compose -f dev.yaml down",
+    "start": "functions-framework --target=helloWorld"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdrideout/crff.git"
+  },
+  "author": "Matthew Rideout",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/mdrideout/crff/issues"
+  },
+  "homepage": "https://github.com/mdrideout/crff#readme",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.5.1"
+  }
+}
